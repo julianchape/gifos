@@ -17,14 +17,35 @@
             </div>
             <div id="redirect">
                 <img src="assets/images/burger.svg" alt="burger menu" id="burger">
-                <ul>
-                    <li><a href=""></a></li>
+                <ul id="lista">
+                    <li>Modo Nocturno</li>
+                    <li>Favoritos</li>
+                    <li>Mis GIFOS</li>
                 </ul>
             </div>
-
-
         </nav>
     </header>
-    
+    <section id="hero">
+        <h1>Inspírate, busca, guarda, y crea los mejores <span id="gifos-word">GIFOS</span></h1>
+    </section>
+    <section id="search">
+        <img src="assets/images/ilustra_header.svg" alt="">
+        <div id="searchbox">
+            <input type="text" id="searchtext" placeholder="Busca GIFOS y más">
+            <img src="assets/images/icon-search.svg" alt="" id="searchbutton">
+        </div>
+        
+    </section>
+
+    <script>
+    var burger = document.getElementById('burger');
+        burger.addEventListener("click",function(){
+            var x = document.getElementById("lista");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        })    </script>
 </body>
 </html>
