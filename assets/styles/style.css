@@ -16,7 +16,7 @@ body {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   grid-auto-rows: minmax(45px, auto);
-      grid-template-areas: "header" "hero" "search" "trending" "footer";
+      grid-template-areas: "header" "hero" "search" "trending" "footer";
 }
 
 body header {
@@ -151,6 +151,11 @@ body #search #searchbox {
 body #search #searchbox #searchtext {
   text-align: center;
   margin-left: 55px;
+  font-family: 'Montserrat',sans-serif;
+}
+
+body #search #searchbox #searchtext :focus {
+  outline: none;
 }
 
 body #search #searchbox #searchbutton {

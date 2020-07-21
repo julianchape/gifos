@@ -107,6 +107,10 @@ body{
             #searchtext{
                 text-align: center;
                 margin-left:55px;
+                font-family: 'Montserrat',sans-serif;
+                :focus{
+                    outline:none;
+                }
             }
             #searchbutton{
                 width:20px;
