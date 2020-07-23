@@ -10,7 +10,7 @@ var burger = document.getElementById('burger');
 
 const apiKey = '2j2nFdUnwzYEf2AFwEXO1LlzWlJFNI5I';
 async function getTrendingGifs(){
-    let url = 'http://api.giphy.com/v1/gifs/trending?api_key='+apiKey+'&limit=3'
+    let url = 'https://api.giphy.com/v1/gifs/trending?api_key='+apiKey+'&limit=3'
     const trendingData = await fetch (url);
     const trendingArray = await trendingData.json();
     return trendingArray.data;
