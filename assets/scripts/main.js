@@ -19,7 +19,6 @@ async function getTrendingGifs(){
 async function addTrendingToDom(){
     var poner = await getTrendingGifs();
     var seccion = document.getElementById('trending');
-    console.log(poner);
     for (let i=0;i<poner.length;i++){
         var img = document.createElement('img');
         img.setAttribute('src',poner[i].images.downsized_large.url);
