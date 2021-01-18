@@ -23,7 +23,6 @@ const getTrendingTags = async () => {
 	await fetch(`${trendingTagsEndpoint}?api_key=${apiKey}`)
 		.then((response) => response.json())
 		.then((trendingTags) => {
-			console.log(trendingTags);
 			displayTrendingTags(trendingTags);
 		})
 		.catch((err) => console.log(err));
@@ -48,7 +47,6 @@ const getTrendingGif = async () => {
 	await fetch(`${trendingEndpoint}?api_key=${apiKey}&limit=12&rating=g`)
 		.then((response) => response.json())
 		.then((results) => {
-			console.log(results);
 			displayTrendingGifs(results);
 		})
 		.catch((err) => console.error(err));

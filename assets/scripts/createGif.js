@@ -54,7 +54,6 @@ const getStreamAndRecord = async () => {
 $buttonComenzar.addEventListener('click', getStreamAndRecord);
 
 const createGifo = () => {
-	console.log('estÃ¡ grabando');
 	$buttonGrabar.style.display = 'none';
 	$buttonFinalizar.style.display = 'block';
 	$timer.classList.remove('hidden');
@@ -105,7 +104,6 @@ const uploeadCreatedGif = async () => {
 		.then((myGif) => {
 
 			let myGifoId = myGif.data.id
-			console.log(myGif.data.id);
 			$overlayStatusIcon.src = 'assets/images/check.svg';
 			$overlayStatusText.innerHTML = 'GIFO subido con exito';
 
@@ -116,7 +114,6 @@ const uploeadCreatedGif = async () => {
 			$overlay.appendChild(buttonsMyGif);
 
 			arrMyGifos.push(myGifoId);
-			console.log(arrMyGifos);
 
 			myGifos = localStorage.setItem('MyGifs', JSON.stringify(arrMyGifos));
 		})

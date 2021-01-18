@@ -89,7 +89,6 @@ const displayMiGifos = () => {
 
 	arrMyGifos = JSON.parse(localStorage.getItem('MyGifs'));
 
-	console.log(arrMyGifos);
 	if (arrMyGifos == null) {
 		arrMyGifos = [];
 	} else {
@@ -99,9 +98,6 @@ const displayMiGifos = () => {
 			)
 				.then((response) => response.json())
 				.then((misGifosGiphy) => {
-					console.log(misGifosGiphy);
-					console.log(typeof misGifosGiphy.data[0].id);
-
 					const gifContainer = document.createElement('div');
 					gifContainer.classList.add('gif__container');
 					gifContainer.innerHTML = `
@@ -192,7 +188,6 @@ const closeMaximized = () => {
 
 const removeGif = (gif) => {
 	let arrFavoriteParsed = JSON.parse(localStorage.getItem('FavoriteGifs'));
-	console.log(arrFavoriteParsed);
 	for (let i = 0; i < arrFavoriteParsed.length; i++) {
 		if (arrFavoriteParsed[i].gif === gif) {
 			arrFavoriteParsed.splice(i, 1);
@@ -209,7 +204,6 @@ const removeGif = (gif) => {
 const removeMyGifos = (gif) => {
 	event.preventDefault();
 	let arrMyGifosParsed = JSON.parse(localStorage.getItem('MyGifs'));
-	console.log(arrMyGifosParsed);
 	for (let i = 0; i < arrMyGifosParsed.length; i++) {
 		if (arrMyGifosParsed[i] == gif) {
 			arrMyGifosParsed.splice(i, 1);
